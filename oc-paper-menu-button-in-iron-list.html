@@ -1,7 +1,6 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-menu-button/paper-menu-button.html">
-<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../ppaper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../paper-menu/paper-menu.html">
 
 <!--
 `oc-paper-menu-button-in-iron-list`
@@ -30,16 +29,9 @@ https://gist.github.com/tbone587/f5ec964fddc388bae85a
       }
     </style>
 
-    <paper-menu-button vertical-align="[[verticalAlign]]" horizontal-align="[[horizontalAlign]]">
-      <paper-icon-button
-              icon="[[icon]]"
-              class="dropdown-trigger"
-              alt="menu">
-      </paper-icon-button>
-      <paper-menu class="dropdown-content">
-        <content></content>
-      </paper-menu>
-    </paper-menu-button>
+    <paper-dropdown-menu>
+      <content></content>
+    </paper-dropdown-menu>
   </template>
 
   <script>
@@ -69,7 +61,7 @@ https://gist.github.com/tbone587/f5ec964fddc388bae85a
               },
 
               attached: function(){
-                var $dropDown = this.$$( "paper-menu-button" ).querySelector( "iron-dropdown" );
+                var $dropDown = this.$$( "paper-dropdown-menu" ).querySelector( "iron-dropdown" );
 
                 // Append the drop down menu to the body to force at highest stacking context.
                 document.body.appendChild( $dropDown );
