@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`oc-paper-menu-button-in-iron-list`
+Element that fixes a bug in placing a dropdown in a iron-list
+
+@demo demo/index.html 
+-->
+
+<dom-module id="oc-paper-menu-button-in-iron-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'oc-paper-menu-button-in-iron-list',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'oc-paper-menu-button-in-iron-list',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
